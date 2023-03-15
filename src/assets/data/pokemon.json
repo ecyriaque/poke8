@@ -1,7 +1,8 @@
 [
-    {"id": 1, "name": "pikachu", "type": "electrique"},
-    {"id": 2, "name": "dracaufeu", "type": "feu"},
-    {"id": 3, "name": "leviator", "type": "eau"},
-    {"id": 4, "name": "mew", "type": "psy"},
-    {"id": 5, "name": "psykokwak", "type": "eau"}
+    {"id": 1, "name": "Pikachu", "type": "ELECTRIQUE", "pv": 35, "attaque":55, "defense":40},
+    {"id": 2, "name": "Dracaufeu", "type": "FEU", "pv": 78, "attaque":84, "defense":78},
+    {"id": 3, "name": "Leviator", "type": "EAU", "pv": 95, "attaque":125, "defense":79},
+    {"id": 4, "name": "Mew", "type": "PSY", "pv": 100, "attaque":100, "defense":100},
+    {"id": 5, "name": "Psykokwak", "type": "EAU", "pv": 50, "attaque":52, "defense":48},
+    {"id": 6, "name": "Arceus", "type": "NORMAL", "pv": 120, "attaque":120, "defense":120}
 ]

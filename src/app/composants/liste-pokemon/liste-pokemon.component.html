@@ -1,20 +1,19 @@
-<div class="poke" *ngFor="let pokemon of pokemons" id="{{ pokemon.type }}">
-        <div class="card mb-3" style="max-width: 540px;" >
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img src=""  alt="" >
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">{{ pokemon.id }}.{{ pokemon.name }}</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <p class="card-text"><small class="text-muted">{{ pokemon.type }}</small></p>
-                </div>
-              </div>
-            </div>
+<div class="poke" *ngFor="let pokemon of pokemons" id="{{ pokemon.type }}" (click)="selectPokemon(pokemon)" >
+  <div class="card mb-3" style="max-width: 540px;" >
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="../../../assets/image/{{pokemon.name}}.png"  alt="" >
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h2 class="card-title">{{ pokemon.id }}. {{ pokemon.name }}</h2>
+           
+            <p class="card-text"><small class="text-muted">Type : {{ pokemon.type }}</small></p>
           </div>
-          
-  </div>
-
+        </div>
+      </div>
+    </div>
+</div>
+<app-detail-pokemon [pokemon]="selectedPokemon"></app-detail-pokemon>
 
 

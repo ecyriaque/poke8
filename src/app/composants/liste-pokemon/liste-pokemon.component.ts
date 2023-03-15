@@ -12,13 +12,26 @@ import { Ipokemon } from "../../pokemon";
 })
 export class ListePokemonComponent implements OnInit{
   public pokemons: any[] = [] ;
-
+  public selectedPokemon : any;
 
   constructor(private _pokemonService: PokemonService){
   }
 
   ngOnInit(){
     this._pokemonService.getPokemons().subscribe(data => ( this.pokemons= data));
+  }
+
+  selectPokemon(pokemon: any) {
+    this._pokemonService.getPokemonDetails(pokemon.id).subscribe(data => {
+      this.selectedPokemon = {
+        id: data.id,
+        name: data.name,
+        type: data.type,
+        pv: data.pv,
+        attaque: data.attaque,
+        defense: data.defense
+      };
+    });
   }
 
 }

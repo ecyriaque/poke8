@@ -13,7 +13,22 @@ import { PokemonApiService } from '../pokemon-api.service';
       </ul>
     </div>
     <app-pokemon-detail [pokemon]="selectedPokemon"></app-pokemon-detail>
-  `
+  `,
+  styles: [`
+    div {
+      float:left;
+      display: inline-block;
+      flex-direction: column;
+      align-items: center;
+     
+    }
+
+    img {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 10px;
+    }
+  `]
 })
 export class PokemonListComponent implements OnInit {
   pokemonList: any[] = [];

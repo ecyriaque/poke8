@@ -14,11 +14,13 @@ import { Component, Input } from '@angular/core';
     </div>
   `,
   styles: [`
-    div {
-      display: flex;
+    #detail{
+      float:center;
+      margin-left:20%;
+      display: inline-block;
       flex-direction: column;
       align-items: center;
-      margin-top: 20px;
+      position:fixed;
     }
 
     img {

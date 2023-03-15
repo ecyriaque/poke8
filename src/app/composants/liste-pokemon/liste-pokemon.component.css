@@ -1,0 +1,29 @@
+.poke{
+    width: max-content;
+    height: max-content;
+    display: inline-block;
+    margin: 1%;
+    border-radius: 20px;
+    padding: 1%;
+}
+
+#psy{
+    background-color: rgb(172, 29, 160);
+}
+
+#eau{
+    background-color: rgb(66, 106, 198);
+}
+
+#electrique{
+    background-color: rgb(212, 221, 52);
+}
+
+#feu{
+    background-color: rgb(198, 77, 66);
+}
+
+img{
+    width: 20px;
+    height: 20px;
+}

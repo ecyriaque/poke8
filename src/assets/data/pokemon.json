@@ -1,0 +1,7 @@
+[
+    {"id": 1, "name": "pikachu", "type": "electrique"},
+    {"id": 2, "name": "dracaufeu", "type": "feu"},
+    {"id": 3, "name": "leviator", "type": "eau"},
+    {"id": 4, "name": "mew", "type": "psy"},
+    {"id": 5, "name": "psykokwak", "type": "eau"}
+]

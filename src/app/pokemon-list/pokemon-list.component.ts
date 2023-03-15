@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { PokemonApiService } from '../pokemon-api.service';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -14,33 +15,27 @@ import { Component } from '@angular/core';
     <app-pokemon-detail [pokemon]="selectedPokemon"></app-pokemon-detail>
   `
 })
-export class PokemonListComponent {
-  pokemonList = [
-    {
-      name: 'Bulbasaur',
-      imageUrl: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png',
-      type: 'Grass/Poison',
-      height: '0.7 m',
-      weight: '6.9 kg'
-    },
-    {
-      name: 'Charmander',
-      imageUrl: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png',
-      type: 'Fire',
-      height: '0.6 m',
-      weight: '8.5 kg'
-    },
-    {
-      name: 'Squirtle',
-      imageUrl: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png',
-      type: 'Water',
-      height: '0.5 m',
-      weight: '9.0 kg'
-    }
-  ];
+export class PokemonListComponent implements OnInit {
+  pokemonList: any[] = [];
   selectedPokemon: any;
 
+  constructor(private pokemonApiService: PokemonApiService) {}
+
+  ngOnInit() {
+    this.pokemonApiService.getAllPokemon().subscribe((response: any) => {
+      this.pokemonList = response.results;
+    });
+  }
+
   selectPokemon(pokemon: any) {
-    this.selectedPokemon = pokemon;
+    this.pokemonApiService.getPokemonDetails(pokemon.url).subscribe((response: any) => {
+      this.selectedPokemon = {
+        name: response.name,
+        imageUrl: response.sprites.front_default,
+        type: response.types[0].type.name,
+        height: response.height,
+        weight: response.weight
+      };
+    });
   }
 }

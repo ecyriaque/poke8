@@ -4,7 +4,7 @@ import { PokemonApiService } from '../pokemon-api.service';
 @Component({
   selector: 'app-pokemon-list',
   template: `
-    <div>
+    <div id="liste">
       <h2>Pokédex</h2>
       <ul>
         <li *ngFor="let pokemon of pokemonList" (click)="selectPokemon(pokemon)">

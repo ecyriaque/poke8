@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+#liste{
+    display: inline-block;
+  
+    width: 40%;
+}
+
+#detail{
+    display: inline-block;
+    
+    width: 40%;
+    float: right;
+    position: fixed;
+}

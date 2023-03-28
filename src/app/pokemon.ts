@@ -5,4 +5,5 @@ export interface Ipokemon{
     pv: number;
     attaque: number;
     defense:number;
+    description:string;
 }

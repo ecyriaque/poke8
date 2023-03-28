@@ -1,8 +1,17 @@
 [
-    {"id": 1, "name": "Pikachu", "type": "ELECTRIQUE", "pv": 35, "attaque":55, "defense":40},
-    {"id": 2, "name": "Dracaufeu", "type": "FEU", "pv": 78, "attaque":84, "defense":78},
-    {"id": 3, "name": "Leviator", "type": "EAU", "pv": 95, "attaque":125, "defense":79},
-    {"id": 4, "name": "Mew", "type": "PSY", "pv": 100, "attaque":100, "defense":100},
-    {"id": 5, "name": "Psykokwak", "type": "EAU", "pv": 50, "attaque":52, "defense":48},
-    {"id": 6, "name": "Arceus", "type": "NORMAL", "pv": 120, "attaque":120, "defense":120}
+    {"id": 1, "name": "Pikachu", "type": "ELECTRIQUE", "pv": 35, "attaque":55, "defense":40, "description" : "Il lui arrive de remettre d’aplomb un Pikachu allié en lui envoyant une décharge électrique"},
+    {"id": 2, "name": "Dracaufeu", "type": "FEU", "pv": 78, "attaque":84, "defense":78 , "description" : "On raconte que la flamme du Dracaufeu s’intensifie après un combat difficile"},
+    {"id": 3, "name": "Leviator", "type": "EAU", "pv": 95, "attaque":125, "defense":79, "description" : "Quand il se laisse emporter par la rage, il ne se calme qu’après avoir détruit tout ce qui l’entoure"},
+    {"id": 4, "name": "Mew", "type": "PSY", "pv": 100, "attaque":100, "defense":100, "description" : " Nombre de scientifiques voient en lui l’ancêtre des Pokémon car il maîtrise toutes leurs capacités"},
+    {"id": 5, "name": "Psykokwak", "type": "EAU", "pv": 50, "attaque":52, "defense":48, "description" : "Ses pouvoirs déconcertants et mystérieux lui font subir de constantes migraines"},
+    {"id": 6, "name": "Arceus", "type": "NORMAL", "pv": 120, "attaque":120, "defense":120, "description" : "On dit que son œuf a éclos dans le néant et qu’il est à l’origine de la création du monde"},
+    {"id": 7, "name": "Dracolosse", "type": "DRAGON", "pv":91 , "attaque":134, "defense":95, "description" : " On raconte qu’il vit quelque part en mer. Il guide les équipages naufragés jusqu’à la terre ferme"},
+    {"id": 8, "name": "Mewtwo", "type": "PSY", "pv": 106, "attaque":110, "defense":90, "description" : "Un Pokémon conçu en réorganisant les gènes de Mew. On raconte qu’il s’agit du Pokémon le plus féroce"},
+    {"id": 9, "name": "Cizayox", "type": "INSECTE", "pv":70 , "attaque":130, "defense":100, "description" : "Les yeux sur ses pinces servent à intimider l’ennemi avant de passer à l’attaque"},
+    {"id": 10, "name": "Tyranocif", "type": "ROCHE", "pv":100, "attaque":134, "defense":110, "description" : "Lorsqu’il est en colère, il abat des montagnes et enterre des fleuves. On doit alors modifier les cartes"},
+    {"id": 11, "name": "Tortank", "type": "EAU", "pv":79 , "attaque":83, "defense":100, "description" : " Les trombes d’eau projetées par les canons de sa carapace peuvent percer le métal le plus résistant"},
+    {"id": 12, "name": "Porygon", "type": "NORMAL", "pv": 65, "attaque":60, "defense":70, "description" : "Ce Pokémon créé par des scientifiques peut arpenter librement le cyberespace"},
+    {"id": 13, "name": "Metamorph", "type": "NORMAL", "pv":48 , "attaque":48, "defense":48, "description" : " Il a la capacité de modifier sa structure cellulaire pour prendre l’apparence de ce qu’il voit"},
+    {"id": 14, "name": "Magicarpe", "type": "EAU", "pv":20 , "attaque":10, "defense":55, "description" : "Un vénérable Magicarpe peut franchir une montagne en utilisant Trempette. Mais c’est tout..."},
+    {"id": 15, "name": "Magmar", "type": "FEU", "pv":65 , "attaque":95, "defense":57, "description" : "Quand il respire profondément, des vagues de chaleur émanent de son corps et le rendent difficile à voir"}
 ]

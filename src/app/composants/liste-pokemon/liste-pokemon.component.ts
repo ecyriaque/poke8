@@ -1,5 +1,5 @@
 import { style } from '@angular/animations';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ElementRef } from '@angular/core';
 import { PokemonService } from 'src/app/pokemon.service';
 import { Ipokemon } from "../../pokemon";
 
@@ -12,26 +12,23 @@ import { Ipokemon } from "../../pokemon";
 })
 export class ListePokemonComponent implements OnInit{
   public pokemons: any[] = [] ;
-  public selectedPokemon : any;
+  selectedPokemon: any;
 
-  constructor(private _pokemonService: PokemonService){
+  selectPokemon(pokemon: any) {
+    this.selectedPokemon = pokemon;
+  }
+
+  constructor(private _pokemonService: PokemonService,private elementRef : ElementRef){
   }
 
   ngOnInit(){
     this._pokemonService.getPokemons().subscribe(data => ( this.pokemons= data));
+
   }
 
-  selectPokemon(pokemon: any) {
-    this._pokemonService.getPokemonDetails(pokemon.id).subscribe(data => {
-      this.selectedPokemon = {
-        id: data.id,
-        name: data.name,
-        type: data.type,
-        pv: data.pv,
-        attaque: data.attaque,
-        defense: data.defense
-      };
-    });
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
 
 }

@@ -1,4 +1,6 @@
-<div class="poke" *ngFor="let pokemon of pokemons" id="{{ pokemon.type }}" (click)="selectPokemon(pokemon)" >
+<app-detail-pokemon [pokemon]="selectedPokemon"></app-detail-pokemon>
+
+<div class="poke" *ngFor="let pokemon of pokemons" id="{{ pokemon.type }}"  >
   <div class="card mb-3" style="max-width: 540px;" >
       <div class="row g-0">
         <div class="col-md-4">
@@ -9,11 +11,14 @@
             <h2 class="card-title">{{ pokemon.id }}. {{ pokemon.name }}</h2>
            
             <p class="card-text"><small class="text-muted">Type : {{ pokemon.type }}</small></p>
+            
+            <button type="button" (click)="selectPokemon(pokemon)" (click)="scrollToTop()">détails</button>
           </div>
         </div>
       </div>
     </div>
 </div>
-<app-detail-pokemon [pokemon]="selectedPokemon"></app-detail-pokemon>
+
+
 
 

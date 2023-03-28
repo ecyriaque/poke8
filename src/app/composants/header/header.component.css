@@ -5,3 +5,7 @@ h1{
     text-align: center;
     color: aliceblue;
 }
+
+button{
+    background-color: rgb(138, 127, 127);
+}

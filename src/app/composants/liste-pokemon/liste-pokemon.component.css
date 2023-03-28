@@ -1,5 +1,5 @@
 .poke{
-    width: 300px;
+    width: 16%;
     height: min-content;
     display: inline-block;
     margin: 1%;
@@ -28,6 +28,17 @@
     background-color: rgb(135, 130, 102);
 }
 
+#DRAGON{
+    background-color: rgb(115, 0, 172);
+}
+
+#INSECTE{
+    background-color: rgb(19, 124, 0);
+}
+
+#ROCHE{
+    background-color: rgb(79, 79, 79);
+}
 .card-text{
     text-align: center;
 }

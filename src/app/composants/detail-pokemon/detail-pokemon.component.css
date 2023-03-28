@@ -1,0 +1,23 @@
+#pokedetails{
+    background-color: rgb(138, 127, 127);
+    width: 96%;
+    height: min-content;
+    margin: 1%;
+    border-radius: 20px;
+    padding: 1%;
+    
+}
+
+
+div{
+    display: inline-block;
+    text-align: center;
+}
+
+#image{
+    padding-right: 5%;
+}
+
+p{
+    font-family:Arial, Helvetica, sans-serif ;
+}

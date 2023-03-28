@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ElementRef } from '@angular/core';
+import { Ipokemon } from "../../pokemon";
 
 @Component({
   selector: 'app-detail-pokemon',
@@ -7,4 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class DetailPokemonComponent {
   @Input() pokemon: any;
+  
 }

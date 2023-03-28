@@ -1,9 +1,21 @@
 
-
 <header  [style.background-color]="this.pokemonApiService.getTypeColor(selectedType)">
     <h1>pokedex</h1>
   </header>
-      <app-pokemon-detail [pokemon]="selectedPokemon"></app-pokemon-detail>
+  <div   *ngIf="selectedPokemon" class="modal" >
+    <div   [style.background-color]="this.pokemonApiService.getTypeColor(selectedPokemon.type)" class="modal-content">
+      <div  class="modal-header">
+        <h2 id="pokeName">{{ selectedPokemon.name }}</h2>
+      </div>
+      <div  class="modal-body">
+        <img [src]="selectedPokemon.imageUrl" [alt]="selectedPokemon.name" />
+        <p><strong>Type:</strong> {{ selectedPokemon.type }}</p>
+        <p><strong>Height:</strong> {{ selectedPokemon.height }}</p>
+        <p><strong>Weight:</strong> {{ selectedPokemon.weight }}</p>
+      </div>  
+      <button (click)="closeModal()">X</button>
+    </div>
+  </div>
   <div class="pokemon-list">
     <mat-form-field>
       <mat-label>Filter by type</mat-label>
@@ -13,15 +25,12 @@
     </mat-form-field>
   
     <div class="pokemon-grid">
-      <div class="pokemon-card" *ngFor="let pokemon of filteredPokemonList" (click)="selectPokemon(pokemon)">
+      <div [style.background-color]="this.pokemonApiService.getTypeColor(pokemon.type)" class="pokemon-card" *ngFor="let pokemon of filteredPokemonList" (click)="selectPokemon(pokemon)">
         <div class="pokemon-image">
           <img [src]="pokemon.imageUrl" alt="{{ pokemon.name }}">
         </div>
         <div class="pokemon-details">
           <h3>{{ pokemon.name }}</h3>
-          <p>Type: {{ pokemon.type }}</p>
-          <p>Height: {{ pokemon.height }} m</p>
-          <p>Weight: {{ pokemon.weight }} kg</p>
         </div>
       </div>
     </div>

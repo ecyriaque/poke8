@@ -57,7 +57,19 @@ export class PokemonListComponent implements OnInit {
         height: response.height,
         weight: response.weight
       };
+      const modal = document.querySelector('.modal') as HTMLElement | null;
+      if (modal) {
+        modal.style.display = 'block';
+      }
     });
+  }
+  
+  closeModal() {
+    this.selectedPokemon = null;
+    const modal = document.querySelector('.modal') as HTMLElement | null;
+    if (modal) {
+      modal.style.display = 'none';
+    }
   }
 }
 

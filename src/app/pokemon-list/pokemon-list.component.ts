@@ -3,43 +3,49 @@ import { PokemonApiService } from '../pokemon-api.service';
 
 @Component({
   selector: 'app-pokemon-list',
-  template: `
-    <div id="liste">
-      <h2>Pokédex</h2>
-      <ul>
-        <li *ngFor="let pokemon of pokemonList" (click)="selectPokemon(pokemon)">
-          {{ pokemon.name }}
-        </li>
-      </ul>
-    </div>
-    <app-pokemon-detail [pokemon]="selectedPokemon"></app-pokemon-detail>
-  `,
-  styles: [`
-    div {
-      float:left;
-      display: inline-block;
-      flex-direction: column;
-      align-items: center;
-     
-    }
-
-    img {
-      width: 150px;
-      height: 150px;
-      margin-bottom: 10px;
-    }
-  `]
+  templateUrl: './pokemon-list.component.html',
+  styleUrls: ['./pokemon-list.component.css']
 })
 export class PokemonListComponent implements OnInit {
   pokemonList: any[] = [];
   selectedPokemon: any;
 
-  constructor(private pokemonApiService: PokemonApiService) {}
+  filteredPokemonList: any[] = [];
+  pokemonTypes: string[] = [];
+  selectedType: string = '';
+  constructor(public pokemonApiService: PokemonApiService) {}
 
+  
+  
+  
   ngOnInit() {
-    this.pokemonApiService.getAllPokemon().subscribe((response: any) => {
-      this.pokemonList = response.results;
+    this.pokemonApiService.getAllPokemon().subscribe((data: any) => {
+      this.pokemonList = data.results;
+      this.filteredPokemonList = this.pokemonList;
+      this.pokemonList.forEach((pokemon: any) => {
+        this.pokemonApiService.getPokemonDetails(pokemon.url).subscribe((data: any) => {
+          pokemon.type = data.types[0].type.name;
+          pokemon.imageUrl = data.sprites.front_default;
+          pokemon.height = data.height / 10; // Convertir en mètres
+          pokemon.weight = data.weight / 10; // Convertir en kilogrammes
+          console.log('Pokemon:', pokemon.name, 'Type:', pokemon.type);
+          this.pokemonTypes = Array.from(new Set([...this.pokemonTypes, pokemon.type]));
+        });
+      });
     });
+  }
+
+
+  filterPokemonList() {
+    console.log('Filtering by type:', this.selectedType);
+    if (this.selectedType) {
+      
+      this.filteredPokemonList = this.pokemonList.filter((pokemon: any) => pokemon.type === this.selectedType);
+      console.log(this.filteredPokemonList);
+    
+    } else {
+      this.filteredPokemonList = this.pokemonList;
+    }
   }
 
   selectPokemon(pokemon: any) {
@@ -54,3 +60,4 @@ export class PokemonListComponent implements OnInit {
     });
   }
 }
+

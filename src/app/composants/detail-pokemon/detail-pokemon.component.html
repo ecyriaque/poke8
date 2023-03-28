@@ -1,11 +1,11 @@
-<div id="pokedetails" *ngIf="pokemon">
-
+<div class="pokedetails" id="{{pokemon.type}}" *ngIf="pokemon">
+  <h1>{{ pokemon.name }}</h1>
   <div id="image"  >
     <img src="../../../assets/image/{{pokemon.name}}.png"  alt="{{pokemon.name}}" >
   </div>
     
   <div id="stats">
-    <h1>{{ pokemon.name }}</h1>
+    
     <p>ID : {{ pokemon.id }}</p>
     <p>Type : {{ pokemon.type }}</p>
     <p>Point de vie : {{ pokemon.pv}}</p>

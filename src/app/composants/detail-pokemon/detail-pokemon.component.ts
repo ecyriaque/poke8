@@ -9,4 +9,6 @@ import { Ipokemon } from "../../pokemon";
 export class DetailPokemonComponent {
   @Input() pokemon: any;
   
+  
 }
+

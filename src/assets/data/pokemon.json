@@ -13,5 +13,69 @@
     {"id": 12, "name": "Porygon", "type": "NORMAL", "pv": 65, "attaque":60, "defense":70, "description" : "Ce Pokémon créé par des scientifiques peut arpenter librement le cyberespace"},
     {"id": 13, "name": "Metamorph", "type": "NORMAL", "pv":48 , "attaque":48, "defense":48, "description" : " Il a la capacité de modifier sa structure cellulaire pour prendre l’apparence de ce qu’il voit"},
     {"id": 14, "name": "Magicarpe", "type": "EAU", "pv":20 , "attaque":10, "defense":55, "description" : "Un vénérable Magicarpe peut franchir une montagne en utilisant Trempette. Mais c’est tout..."},
-    {"id": 15, "name": "Magmar", "type": "FEU", "pv":65 , "attaque":95, "defense":57, "description" : "Quand il respire profondément, des vagues de chaleur émanent de son corps et le rendent difficile à voir"}
+    {"id": 15, "name": "Magmar", "type": "FEU", "pv":65 , "attaque":95, "defense":57, "description" : "Quand il respire profondément, des vagues de chaleur émanent de son corps et le rendent difficile à voir"},
+    {
+        "id": 16,
+        "name": "Bulbizarre",
+        "type": "PLANTE",
+        "pv": 45,
+        "attaque": 49,
+        "defense": 49,
+        "description": "La plante sur son dos grandit en absorbant les rayons du soleil. Il peut aussi la faire fouetter pour frapper ses ennemis."
+      },
+      {
+        "id": 17,
+        "name": "Herbizarre",
+        "type": "PLANTE",
+        "pv": 60,
+        "attaque": 62,
+        "defense": 63,
+        "description": "La plante sur son dos grandit encore plus. Il peut marcher sur ses quatre pattes, ce qui lui permet de courir à toute vitesse."
+      },
+      {
+        "id": 18,
+        "name": "Florizarre",
+        "type": "PLANTE",
+        "pv": 80,
+        "attaque": 82,
+        "defense": 83,
+        "description": "La fleur sur son dos dégage un parfum enivrant. Les ennemis qui s'en approchent sont étourdis et attaqués."
+      },
+      {
+        "id": 19,
+        "name": "Salamèche",
+        "type": "FEU",
+        "pv": 39,
+        "attaque": 52,
+        "defense": 43,
+        "description": "Il peut survivre dans presque tous les environnements grâce aux flammes qui brûlent dans sa queue."
+      },
+      {
+        "id": 20,
+        "name": "Reptincel",
+        "type": "FEU",
+        "pv": 58,
+        "attaque": 64,
+        "defense": 58,
+        "description": "Il peut attaquer ses ennemis en crachant des flammes à plus de 900°C. Si sa flamme brûle violemment, c'est signe qu'il est prêt à évoluer."
+      },
+    
+      {
+        "id": 21,
+        "name": "Carapuce",
+        "type": "EAU",
+        "pv": 44,
+        "attaque": 48,
+        "defense": 65,
+        "description": "Il se protège en se réfugiant dans sa carapace dure comme de la pierre. Les attaques ennemies ne peuvent pas le blesser."
+      },
+      {
+        "id": 22,
+        "name": "Carabaffe",
+        "type": "EAU",
+        "pv": 59,
+        "attaque": 63,
+        "defense": 80,
+        "description": "Les canons à eau sur son dos tirent avec une puissance incroyable. Il peut même perforer de l'acier avec ses jets d'eau."
+      }
 ]

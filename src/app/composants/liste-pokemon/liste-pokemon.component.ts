@@ -13,6 +13,7 @@ import { Ipokemon } from "../../pokemon";
 export class ListePokemonComponent implements OnInit{
   public pokemons: any[] = [] ;
   selectedPokemon: any;
+  selectedType: any;
 
   selectPokemon(pokemon: any) {
     this.selectedPokemon = pokemon;
@@ -29,6 +30,8 @@ export class ListePokemonComponent implements OnInit{
   scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+
 
 
 }

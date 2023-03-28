@@ -7,38 +7,6 @@
     
 }
 
-#PSY{
-    background-color: rgb(172, 29, 160);
-}
-
-#EAU{
-    background-color: rgb(66, 106, 198);
-}
-
-#ELECTRIQUE{
-    background-color: rgb(212, 221, 52);
-}
-
-#FEU{
-    background-color: rgb(198, 77, 66);
-}
-
-#NORMAL{
-    
-    background-color: rgb(79, 79, 79);
-}
-
-#DRAGON{
-    background-color: rgb(115, 0, 172);
-}
-
-#INSECTE{
-    background-color: rgb(19, 124, 0);
-}
-
-#ROCHE{
-    background-color: rgb(135, 130, 102);
-}
 div{
     display: inline-block;
     text-align: center;
@@ -63,3 +31,77 @@ p{
     font-size: 1000%;
 
 }
+
+/*types*/
+#NORMAL {
+    background-color: #C6C6A7;
+  }
+  
+  #FEU {
+    background-color: #F5AC78;
+  }
+  
+  #EAU {
+    background-color: #9DB7F5;
+  }
+  
+  #ELECTRIQUE {
+    background-color: #FAE078;
+  }
+  
+  #PLANTE {
+    background-color: #A7DB8D;
+  }
+  
+  #GLACE {
+    background-color: #BCE6E6;
+  }
+  
+  #COMBAT {
+    background-color: #D67873;
+  }
+  
+  #POISON {
+    background-color: #C183C1;
+  }
+  
+  #SOL {
+    background-color: #EBD69D;
+  }
+  
+  #VOL {
+    background-color: #C6B7F5;
+  }
+  
+  #PSY {
+    background-color: #FA92B2;
+  }
+  
+  #INSECTE {
+    background-color: #C6D16E;
+  }
+  
+  #ROCHE {
+    background-color: #D1C17D;
+  }
+  
+  #SPECTRE {
+    background-color: #A292BC;
+  }
+  
+  #DRAGON {
+    background-color: #A27DFA;
+  }
+  
+  #TENEBRES {
+    background-color: #A29288;
+  }
+  
+  #ACIER {
+    background-color: #D1D1E0;
+  }
+  
+  #FEE {
+    background-color: #F4BDC9;
+  }
+  
